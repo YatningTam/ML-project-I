@@ -2,17 +2,13 @@ import math
 
 import matplotlib.pyplot as plt
 import numpy as np
-
 import util
 
 
 def initial_state():
-    """Return the initial state for the perceptron. 
-    This function computes and then returns the initial state of the perceptron.
-
-    Returns:
-
-
+    """
+    Return the initial state for the perceptron. 
+    This function computes and then returns the initial state of the perceptron. 
     Hint: perceptron is a batch learner
     """
     state = []
