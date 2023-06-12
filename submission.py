@@ -3,32 +3,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 np.seterr(all='raise')
-
-
 factor = 2.0
 
 
 class LinearModel(object):
-    """Base class for linear models.
+    """
+    Base class for linear models.
     Attributes:
     theta: np.ndarray, dtype=np.float64, shape=(n_features,). Weights vector for
     the model.
     """
 
     def __init__(self, theta=None):
-        """
-        Args:
-        theta: (See class definition)
-        """
         self.theta = theta
 
     def fit(self, x, y):
-        """Fits the linear model to x -> y using np.linalg.solve.
-        Remember to update self.theta with the fitted model parameters.
-        Args:
+        """
+        Fits the linear model to x -> y using np.linalg.solve.
         x: np.ndarray, dtype=np.float64, shape=(n_examples, n_features). Inputs.
         y: np.ndarray, dtype=np.float64, shape=(n_examples,). Outputs.
-        Returns: Nothing
         Hint: use np.dot to support a vectorized solution
         """
         pass
@@ -39,13 +32,13 @@ class LinearModel(object):
         # *** END CODE HERE ***
 
     def predict(self, x):
-        """ Makes a prediction given a new set of input features.
+        """
+        Makes a prediction given a new set of input features.
         Args:
         x: np.ndarray, dtype=np.float64, shape=(n_examples, n_features). Model input.
         Returns: np.ndarray, dtype=np.float64, shape=(n_examples,). Model output.
         Hint: use np.dot to support a vectorized solution
         """
-        pass
         # *** START CODE HERE ***
         result = x.dot(self.theta)
         return result
@@ -72,10 +65,8 @@ class LinearModel(object):
     def create_sin(k, x):
         """ Generates sine and polynomial features of the input data x.
         Args:
-        x: np.ndarray, dtype=np.float64, shape=(n_examples, 1). Training inputs.
-        Returns: np.ndarray, dtype=np.float64, shape=(n_examples, k+2). Sine (column
-        0) and polynomial (columns 1 to k+1) features of x with powers 0 to k
-        (inclusive).
+        Sine (column 0) and polynomial (columns 1 to k+1) features of x
+        with powers 0 to k (inclusive).
         """
         pass
         # *** START CODE HERE ***
