@@ -6,7 +6,8 @@ WILDCARD = 'X'
 
 
 def main_LogReg(train_path, valid_path, save_path):
-    """Problem (1b): Logistic regression with Newton's Method.
+    """
+    Problem (1b): Logistic regression with Newton's Method.
 
     Args:
         train_path: Path to CSV file containing dataset for training.
@@ -20,7 +21,7 @@ def main_LogReg(train_path, valid_path, save_path):
     clf = LogisticRegression()
     clf.fit(x_train, y_train)
 
-    # Plot decision boundary on top of validation set set
+    # Plot decision boundary on top of validation set
     x_eval, y_eval = util.load_dataset(valid_path, add_intercept=True)
     plot_path = save_path.replace('.txt', '.png')
     util.plot(x_eval, y_eval, clf.theta, plot_path)
@@ -80,17 +81,11 @@ class LogisticRegression:
 
             if np.linalg.norm(grad_j, ord=1) < self.eps:
                 break
-        print(itr)
         # *** END CODE HERE ***
 
     def predict(self, x):
-        """Return predicted probabilities given new inputs x.
-
-        Args:
-            x: Inputs of shape (n_examples, dim).
-
-        Returns:
-            Outputs of shape (n_examples,).
+        """
+        Return predicted probabilities given new inputs x.
         """
         # *** START CODE HERE ***
         predict_y = (1. / (1. + np.exp(-np.dot(self.theta, x.T))))
@@ -128,8 +123,8 @@ def main_GDA(train_path, valid_path, save_path):
 
 
 class GDA:
-    """Gaussian Discriminant Analysis.
-
+    """
+    Gaussian Discriminant Analysis.
     Example usage:
         > clf = GDA()
         > clf.fit(x_train, y_train)
