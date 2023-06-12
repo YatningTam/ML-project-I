@@ -57,7 +57,8 @@ class PoissonRegression:
         self.verbose = verbose
 
     def fit(self, x, y):
-        """Run gradient ascent to maximize likelihood for Poisson regression.
+        """
+        Run gradient ascent to maximize likelihood for Poisson regression.
 
         Args:
             x: Training example inputs. Shape (n_examples, dim).
