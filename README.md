@@ -1,2 +1,2 @@
 # ML-projects
-A total of five projects from Stanford Machine Learning Certification Program.
+Four projects from Stanford Machine Learning Certification Program.
